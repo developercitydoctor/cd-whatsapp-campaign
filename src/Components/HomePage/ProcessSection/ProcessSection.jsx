@@ -5,7 +5,7 @@ import step1Image from "../../../assets/Icons/icon-6.png";
 import step2Image from "../../../assets/Icons/icon-7.png";
 import step3Image from "../../../assets/Icons/icon-8.png";
 
-import chatbotIcon from "../../../assets/Common/chatbot-icon-white.png";
+import whatsappIcon from "../../../assets/Common/whatsapp.svg";
 
 const steps = [
   {
@@ -13,7 +13,7 @@ const steps = [
     stepNumber: "1",
     image: step1Image,
     title: "WhatsApp or Chat",
-    description: "Click the WhatsApp button to chat with us and request a doctor visit."
+    description: "Click the button to book instantly via WhatsApp and request a doctor visit."
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ const steps = [
 ];
 
 const ProcessSection = () => {
-  const { openChatbot } = useChatbot();
+  const { openPopupForm } = useChatbot();
   return (
     <section id="process" className="process-section section-container">
       <div className="process-wrapper">
@@ -59,9 +59,9 @@ const ProcessSection = () => {
         </div>
 
         <div className="whatsapp-booking-wrapper">
-          <button type="button" className="btn primary-btn" onClick={openChatbot}>
-            <img src={chatbotIcon} alt="Chat with us" className="btn-icon" />
-            Chat with us
+          <button type="button" className="btn primary-btn" onClick={openPopupForm}>
+            <img src={whatsappIcon} alt="Book Instantly Via WhatsApp" className="btn-icon" />
+            Book Instantly Via WhatsApp
           </button>
         </div>
       </div>

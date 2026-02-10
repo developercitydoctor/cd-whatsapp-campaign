@@ -12,7 +12,7 @@ import service8 from "../../../assets/Services/image-8.webp";
 import service9 from "../../../assets/Services/image-9.webp";
 import service10 from "../../../assets/Services/image-10.webp";
 
-import chatbotIcon from "../../../assets/Common/chatbot-icon-white.png";
+import whatsappIcon from "../../../assets/Common/whatsapp.svg";
 
 const services = [
   {
@@ -78,7 +78,7 @@ const services = [
 ];
 
 const ServicesSection = () => {
-  const { openChatbot } = useChatbot();
+  const { openPopupForm } = useChatbot();
   return (
     <section id="services" className="services-section">
       <div className="services-wrapper">
@@ -105,9 +105,9 @@ const ServicesSection = () => {
         </div>
 
         <div className="whatsapp-booking-wrapper">
-          <button type="button" className="btn primary-btn" onClick={openChatbot}>
-            <img src={chatbotIcon} alt="Chat with us" className="btn-icon" />
-            Chat with us
+          <button type="button" className="btn primary-btn" onClick={openPopupForm}>
+            <img src={whatsappIcon} alt="Book Instantly Via WhatsApp" className="btn-icon" />
+            Book Instantly Via WhatsApp
           </button>
         </div>
       </div>

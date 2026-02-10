@@ -8,7 +8,7 @@ import icon3 from "../../../assets/Icons/icon-3.png";
 import icon4 from "../../../assets/Icons/icon-4.png";
 import icon5 from "../../../assets/Icons/icon-5.png";
 
-import chatbotIcon from "../../../assets/Common/chatbot-icon-white.png";
+import whatsappIcon from "../../../assets/Common/whatsapp.svg";
 
 const features = [
   {
@@ -44,7 +44,7 @@ const features = [
 ];
 
 const WhyChooseUsSection = () => {
-  const { openChatbot } = useChatbot();
+  const { openPopupForm } = useChatbot();
   return (
     <section id="why-choose-us" className="why-choose-us-section section-container">
       <div className="why-choose-us-wrapper">
@@ -68,9 +68,9 @@ const WhyChooseUsSection = () => {
               ))}
             </div>
             <div className="whatsapp-booking-wrapper">
-              <button type="button" className="btn primary-btn" onClick={openChatbot}>
-                <img src={chatbotIcon} alt="Chat with us" className="btn-icon" />
-                Chat with us
+              <button type="button" className="btn primary-btn" onClick={openPopupForm}>
+                <img src={whatsappIcon} alt="Book Instantly Via WhatsApp" className="btn-icon" />
+                Book Instantly Via WhatsApp
               </button>
             </div>
           </div>

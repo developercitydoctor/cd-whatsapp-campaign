@@ -8,12 +8,12 @@ import icon12 from "../../../assets/Icons/icon-12.png";
 import icon13 from "../../../assets/Icons/icon-13.png";
 import useIsMobile from "../../../Utils/useIsMobile";
 import { useChatbot } from "../../../Context/ChatbotContext";
-import chatbotIcon from "../../../assets/Common/chatbot-icon-white.png";
+import whatsappIcon from "../../../assets/Common/whatsapp.svg";
 
 
 export default function HomeHero() {
   const isMobile = useIsMobile(768);
-  const { openChatbot } = useChatbot();
+  const { openPopupForm } = useChatbot();
 
   return (
     <>
@@ -49,9 +49,9 @@ export default function HomeHero() {
           </div>
 
           <div className="hero-buttons">
-            <button type="button" className="btn primary-btn" onClick={openChatbot}>
-              <img src={chatbotIcon} alt="Chat with us" className="btn-icon" />
-              Chat with us
+            <button type="button" className="btn primary-btn" onClick={openPopupForm}>
+              <img src={whatsappIcon} alt="Book Instantly Via WhatsApp" className="btn-icon" />
+              Book Instantly Via WhatsApp
             </button>
           </div>
         </div>
