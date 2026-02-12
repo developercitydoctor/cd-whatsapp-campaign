@@ -124,10 +124,10 @@ function PopupForm({ handleClose }) {
           <div className="popup-content">
             <div className="popup-header">
               {/* <img src={logo} alt="City Doctor" className="popup-logo" /> */}
-              <h1 className="popup-title">Book a Doctor at Your Doorstep</h1>
-              <p className="popup-subtitle">
+              <h1 className="popup-title">Book a Doctor<br/> at Your Doorstep</h1>
+              {/* <p className="popup-subtitle">
                 Fill in your details and our medical consultants will reach out to you shortly.
-              </p>
+              </p> */}
             </div>
 
             <div className="popup-live-banner">
