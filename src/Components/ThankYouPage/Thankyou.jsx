@@ -47,6 +47,14 @@ export default function Thankyou() {
         return () => clearInterval(timer);
     }, [fromSubmit, countdown]);
 
+    useEffect(() => {
+        if (!fromSubmit || !whatsappLink || countdown > 0) return;
+        const redirectTimer = setTimeout(() => {
+            window.location.href = whatsappLink;
+        }, 1000);
+        return () => clearTimeout(redirectTimer);
+    }, [fromSubmit, whatsappLink, countdown]);
+
     return (
         <>
             <Helmet title="City Doctor | Thank You" />
