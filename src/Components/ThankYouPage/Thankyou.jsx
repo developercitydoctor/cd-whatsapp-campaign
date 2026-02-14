@@ -22,7 +22,7 @@ export default function Thankyou() {
     const state = location.state || {};
     const fromSubmit = !!state && Array.isArray(state.symptoms);
 
-    const [countdown, setCountdown] = useState(fromSubmit ? 5 : 0);
+    const [countdown, setCountdown] = useState(fromSubmit ? 1 : 0);
 
     const symptomsForMessage = (() => {
         if (!fromSubmit || !state.symptoms) return [];
