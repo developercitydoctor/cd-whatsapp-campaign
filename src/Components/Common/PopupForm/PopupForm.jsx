@@ -111,7 +111,13 @@ function PopupForm({ handleClose }) {
         }
 
         setTimeout(() => {
-          navigate("/thank-you", { state: { symptoms: symptomsForThankYou, symptomsOther: symptomsOtherForThankYou } });
+          navigate("/thank-you", {
+            state: {
+              fromChatbot: true,
+              symptoms: symptomsForThankYou,
+              symptomsOther: symptomsOtherForThankYou,
+            },
+          });
           handleClose();
         }, 3000);
       } else {
